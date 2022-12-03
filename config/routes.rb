@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'categories/index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root 'categories#index'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :categories
+
+  # get 'categories' => 'categories#index'
+  # get 'categories/:id', to: 'categories#show'
 end
