@@ -1,11 +1,17 @@
 <h1>Categories</h1>
 
-<ul>
-  <% @categories.each do |category| %>
-    <li>
-      <%= link_to category.name, category %> <br>
-      <%= category.body %>
-    </li>
-  <% end %>
-  <%= link_to "new category", new_category_path %> <br>
-</ul>
+<table>
+  <tr>
+    <td>Category Name</td>
+    <td>Category Body</td>
+  </tr>
+
+  <%@categories.each do |category| %>
+    <tr>
+      <td><%= link_to category.name, category %></td>
+      <td><%= category.body %></td>
+    </tr>
+    <%end%>
+</table>
+
+<%= link_to "new category", new_category_path %>

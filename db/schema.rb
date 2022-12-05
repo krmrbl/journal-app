@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_01_114135) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_05_011839) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.integer "category_id"
+    t.string "task"
+    t.string "name"
+    t.string "body"
+    t.datetime "deadline"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

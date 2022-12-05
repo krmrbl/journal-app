@@ -1,0 +1,31 @@
+
+<div>
+<table>
+  <thead>
+    <tr>
+      <th>TASK NAME</th>
+      <th>TASK DESCRIPTION</th>
+      <th>DEADLINE</th>
+      <th>STATUS</th>
+      <th>CREATED AT</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.name %></td>
+        <td><%= task.body %></td>
+        <td><%= task.deadline %></td>
+        <td><%= task.status %></td>
+        <td><%= task.created_at %></td>
+      </tr>
+    <%end%>
+
+  </tbody>
+</table>
+
+  <button type="button"><%= link_to 'Back', category_path(@category_id) %></button>
+
+</div>

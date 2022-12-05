@@ -35,8 +35,18 @@ class CategoriesController < ApplicationController
     end
   end
 
+  # def destroy
+  #   @category = Category.find(params[:id])
+  #   if @category.destroy
+  #     redirect_to categories_path
+  #   else
+  #     render :index
+  #   end
+  # end
+
   private
-    def category_params
-      params.require(:category).permit(:name, :body)
-    end
+
+  def category_params
+    params.require(:category).permit(:name, :body)
+  end
 end
